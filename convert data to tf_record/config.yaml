@@ -1,0 +1,6 @@
+es_address: http://10.32.2.69:32070,http://10.32.2.70:32070
+train_sources: Librispeech-train-clean-360,Librispeech-train-clean-100
+eval_sources: Librispeech-dev-other,Librispeech-dev-clean
+test_sources: Librispeech-test-other,Librispeech-test-clean
+# available sources: Librispeech-train-clean-360,Librispeech-train-clean-100,Librispeech-test-other,Librispeech-dev-other,Librispeech-dev-clean,Librispeech-test-clean,Common_voice-cv-valid-train,Common_voice-cv-other-train,Common_voice-cv-valid-dev,Common_voice-cv-other-dev,Common_voice-cv-valid-test,Common_voice-cv-other-test
+

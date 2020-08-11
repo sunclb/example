@@ -1,0 +1,6 @@
+## As most of the functions are writen in python and some of them shareing the same library, so the docker run is designed below way
+1. Docker image itself is a python environment, when run the docker, need to mount the volumn to WORKDIR in docker
+2. put all function python files to the mounted volumn to allow docker to see the scripts
+3. Run docker with specify --env function_file=target_function_py_file
+
+do it this way can significately eliminate image built time and speed up development and debug process

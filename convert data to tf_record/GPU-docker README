@@ -1,0 +1,20 @@
+# Copy this dir to your own place: cp -r /home/zhihai/docker /home/<your acct>/
+# Get your acct info $u
+id -u
+
+#Get your group info $g
+id -g
+
+# Run vi Dockerfile to edit the text below
+# Replace groupid and user id  with above data, Replace zhihai with your user name
+RUN groupadd -g 1004 huiyuan && \
+    useradd -m -r -u 1003 -g huiyuan huiyuan
+USER huiyuan
+
+
+# build image
+docker build . -t huiyuan-notebook --no-cache
+
+# run jupyter
+docker run --rm --runtime=nvidia -it -p 8898:8888 -p 6000:6006 -v /home/huiyuan/project:/Code huiyuan-notebook
+

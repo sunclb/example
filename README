@@ -1,0 +1,5 @@
+##This repo is to show some example codes to complete below two tasks
+1. Create a data collection pipline to download youtube data, cut it into required length, call Google API to get preliminary transcript to ease data labeling and save the preliminary labeled data in elastic search database and obs(cloud bucket)
+2. download data from obs(cloud bucket) and elastic search database and process audio data and related labels to tf record to prepare for training
+
+Please check individual README to check how to use it

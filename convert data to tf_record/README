@@ -1,0 +1,28 @@
+## data structure
+the wav files stored in obs and all other information like transcript, source (where is the data downloaded from) is stored in elasticsearch
+the key to match is filename
+
+## config.yaml
+you can change the config.yaml file: train_sources, eval_sources and test_sources to config the program to load different files to different dataset
+
+## up your docker container according to example Dockerfile and GPU-docker README
+
+scp all files in this folder to your local volume 
+
+run below code to pull data from obs and convert them to tf record in the running jupyter notebook
+
+USR_DIR='cust_problems'
+PROBLEM='asr_en'
+DATA_DIR='data'
+TMP_DIR='tmp'
+
+
+!t2t-datagen \
+  --t2t_usr_dir=$USR_DIR \
+  --data_dir=$DATA_DIR \
+  --tmp_dir=$TMP_DIR \
+  --problem=$PROBLEM
+
+All tf records will be saved in data folder
+
+

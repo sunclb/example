@@ -1,0 +1,15 @@
+### About this
+This repo defines a pipline of tasks from 'download and cut file'(download, trigger monitoring pipline, clean filename, raw data upload and trigger call API pipline), 'call API'(call API with quantity control due to quota limitation, file and label upload, rework if necessary)'
+
+Besides these two,
+- 'monitor pipline is to generate process report as well as the progress of the pipline and if all tasks are complete, it will trigger end_pipline to end all process'
+- After the data is processed, they will be available to a data labeling portal for vendor to do data labeling
+- During data labeling, run 'post_verification_process pipline' to generate report to monitor the quantity and quality of vendor's work
+
+### pre-requisiton for running this pipline
+All related services need to be run as a docker service. Some example services are in 'services' folder
+
+### run data collection pipline
+1. docker build -t puckel-airflow-with-docker-inside .
+2. deploy this image to cloud instance
+3. docker-compose up to run the airflow service in cloud instance

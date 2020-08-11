@@ -1,0 +1,5 @@
+es_address: http://10.32.2.69:32070,http://10.32.2.70:32070
+number_thread: 10
+input_dir: ./data/API_input/
+language_code: id
+index: "asr-verification"

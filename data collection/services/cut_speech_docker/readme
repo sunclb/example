@@ -1,0 +1,9 @@
+Docker image name: cut_speech
+upload folderbased_cut_speech.py to host/path
+This docker contains one functions: download youtube audio from a link file
+function 
+docker run -v host/path:container/workingdirectory --env function_file=folderbased_cut_speech.py --env output_folder=path/to/save --env input_folder=path/of/audio/folder cut_speech
+e.g.
+docker run -v ~/:/app --env function_file=folderbased_cut_speech.py --env output_folder=./cut_output --env input_folder=./download_output cut_speech
+
+
